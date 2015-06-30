@@ -119,36 +119,6 @@
         <!-- /.container -->
     </nav>
 
-    <div id="map" style="height: 600px; width: 100%;"></div>
-    <script type="text/javascript">
-				var MapSurferNET = L.tileLayer('http://openmapsurfer.uni-hd.de/tiles/roads/x={x}&y={y}&z={z}', {
-					maxZoom: 19,
-					attribution: 'Data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> | Tiles &copy; <a href="http://giscience.uni-hd.de/">GIScience Research Group @ Heidelberg University</a>'
-					});
-				var OpenStreetMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-					maxZoom: 19,
-					attribution: 'Data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-					});
-				var MapBoxStreets = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.streets-basic/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYW5keWdvbCIsImEiOiJwSUo1SV9ZIn0.5Y4I6L-HlwNhbMMSzhU0Mg', {
-					maxZoom: 19,
-					attribution: 'Data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> | Tiles &copy; <a href="http://www.mapquest.com/">MapQuest</a>'
-					});
-					
-				var map = L.map('map', {
-					center: [48.509, 31.245],
-					zoom: 6
-					});
-				map.addLayer(MapSurferNET);
-				
-				var baseLayers = {
-					"MapSurfer.NET": MapSurferNET, 
-					"OpenStreetMap": OpenStreetMap, 
-					"MapBox.Streets": MapBoxStreets
-					};
-				var overlays = { };
-				L.control.layers(baseLayers, overlays).addTo(map);
-	</script>
-
     <!-- Page Content -->
     <div class="container">
 
@@ -194,6 +164,36 @@
             </div>
         </div>
         <!-- /.row -->
+
+    <div id="map" style="height: 600px; width: 100%;"></div>
+    <script type="text/javascript">
+				var MapSurferNET = L.tileLayer('http://openmapsurfer.uni-hd.de/tiles/roads/x={x}&y={y}&z={z}', {
+					maxZoom: 19,
+					attribution: 'Data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> | Tiles &copy; <a href="http://giscience.uni-hd.de/">GIScience Research Group @ Heidelberg University</a>'
+					});
+				var OpenStreetMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+					maxZoom: 19,
+					attribution: 'Data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+					});
+				var MapBoxStreets = L.tileLayer('https://{s}.tiles.mapbox.com/v4/mapbox.streets-basic/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYW5keWdvbCIsImEiOiJwSUo1SV9ZIn0.5Y4I6L-HlwNhbMMSzhU0Mg', {
+					maxZoom: 19,
+					attribution: 'Data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> | Tiles &copy; <a href="http://www.mapquest.com/">MapQuest</a>'
+					});
+					
+				var map = L.map('map', {
+					center: [48.509, 31.245],
+					zoom: 6
+					});
+				map.addLayer(MapSurferNET);
+				
+				var baseLayers = {
+					"MapSurfer.NET": MapSurferNET, 
+					"OpenStreetMap": OpenStreetMap, 
+					"MapBox.Streets": MapBoxStreets
+					};
+				var overlays = { };
+				L.control.layers(baseLayers, overlays).addTo(map);
+	</script>
 
         <!-- Portfolio Section -->
         <div class="row">
